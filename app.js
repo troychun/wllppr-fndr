@@ -1,7 +1,7 @@
 $(function() {
         var params = {
             // Request parameters
-            "q": "cats",
+            "q": "bird",
             "count": "10",
             "offset": "0",
             "mkt": "en-us",
@@ -26,6 +26,11 @@ $(function() {
             console.log('error');
         });
     });
+	$("#button").on('click', function(event){
+		event.preventDefault();
+		var searchTerm = $('#mySearch').val();
+		console.log(searchTerm);
+	});
 
 
 //c92a135e4f8e4d71a99076a9877f2258

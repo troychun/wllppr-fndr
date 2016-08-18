@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class='header'></div>
-    <div class="searchForm"></div>
+    <div class="searchForm">
+        <form name="searchForm">
+            <input name="search" id="mySearch" placeholder="Type something..">
+            <button id="button">Submit</button>
+        </form>
+    </div>
     <div id="searchResults"></div>
 
 
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-    <script src= "app.js"></script>
+    <script src="app.js"></script>
 
-  </body>
+</body>
+
 </html>
