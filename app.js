@@ -6,6 +6,10 @@ $(function() {
         "offset": "0",
         "mkt": "en-us",
         "safeSearch": "Moderate",
+        "size": "Wallpaper",
+        "color": "Green",
+        "height": 1080,
+        "width": 1920,
     };
 
     function searchBing() {
