@@ -7,7 +7,7 @@ $(function() {
         "mkt": "en-us",
         "safeSearch": "Moderate",
         "size": "Wallpaper",
-        "color": "Green",
+        //"color": "Green",
         "height": 1080,
         "width": 1920,
     };
@@ -26,12 +26,12 @@ $(function() {
             .done(function(data) {
                 console.log(data);
                 $('#searchResults').text("");
-                for (var i = 0; i < 10; i++){
+                for (var i = 0; i < 10; i++) {
                     $('#searchResults').append([
                         $('<div>')
                         .addClass('thumbNail')
                         .html("<a target = '_blank' href=" + data.value[i].contentUrl + "><img src=" + data.value[i].thumbnailUrl + "></a>")
-                      ]);
+                    ]);
                 };
 
             })
@@ -43,8 +43,16 @@ $(function() {
     $("#button").on('click', function(event) {
         event.preventDefault();
         var searchTerm = $('#mySearch').val();
+        var color = $('#color').val();
+        if(color !== "Nothing"){
+            if(color === "Random"){
+               var colorArray = ['ColorOnly', 'Monochrome', 'Black', 'Blue', 'Brown', 'Gray', 'Green', 'Orange', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow'];
+               color = colorArray[Math.floor(Math.random() * colorArray.length)];
+            }
+          params.color = color;
+        }
         params.q = searchTerm;
-				searchBing();
+        searchBing();
     });
 });
 
