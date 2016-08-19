@@ -21,7 +21,14 @@ $(function() {
             })
             .done(function(data) {
                 console.log(data);
-                $('#searchResults').html("<img src=" + data.value[0].contentUrl + ">");
+                for (var i = 0; i < 10; i++){
+                    $('#searchResults').append([
+                        $('<div>').addClass('thumbNail').html("<img src=" + data.value[i].thumbnailUrl + ">")
+                      ]);
+
+
+                };
+
             })
             .fail(function() {
                 console.log('error');
