@@ -21,12 +21,11 @@ $(function() {
             })
             .done(function(data) {
                 console.log(data);
+                $('#searchResults').text("");
                 for (var i = 0; i < 10; i++){
                     $('#searchResults').append([
                         $('<div>').addClass('thumbNail').html("<img src=" + data.value[i].thumbnailUrl + ">")
                       ]);
-
-
                 };
 
             })
