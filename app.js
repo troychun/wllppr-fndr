@@ -24,7 +24,9 @@ $(function() {
                 $('#searchResults').text("");
                 for (var i = 0; i < 10; i++){
                     $('#searchResults').append([
-                        $('<div>').addClass('thumbNail').html("<img src=" + data.value[i].thumbnailUrl + ">")
+                        $('<div>')
+                        .addClass('thumbNail')
+                        .html("<a target = '_blank' href=" + data.value[i].contentUrl + "><img src=" + data.value[i].thumbnailUrl + "></a>")
                       ]);
                 };
 
@@ -43,5 +45,6 @@ $(function() {
 });
 
 
-
+//<a href='http...'><img src="http://wwww.imageurl"></a>
+//practice writing out structure, allows user to click on thumbnail and will lead to link
 //c92a135e4f8e4d71a99076a9877f2258
